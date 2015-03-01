@@ -1,0 +1,14 @@
+@import url("http://fonts.googleapis.com/css?family=Lato");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans");
+body {
+  font: 17px "Lato", sans-serif;
+  color: #333;
+}
+.jumbotron h1 {
+  font: 42px "Open Sans", sans-serif;
+}
+.logo {
+  margin-top: -15px;
+  height: 50px;
+  width: 70px;
+}

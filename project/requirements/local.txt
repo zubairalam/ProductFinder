@@ -1,0 +1,9 @@
+# Local python packages only
+-r base.txt
+
+# python related
+
+
+# django related
+django-debug-toolbar==1.0.1
+django-haystack-panel==0.2.1

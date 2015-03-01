@@ -1,0 +1,7 @@
+# Production python packages only
+-r base.txt
+
+# python related
+uwsgi==2.0.3
+
+# django related

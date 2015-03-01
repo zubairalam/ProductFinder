@@ -1,0 +1,4 @@
+fixtures = (
+    'site',
+    'auth.user',
+)

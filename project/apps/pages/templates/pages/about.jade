@@ -1,0 +1,12 @@
+- extends "base.jade"
+- load i18n webdesign
+block title
+    | {% blocktrans %}About Us{% endblocktrans %}
+block content
+    .jumbotron
+        h1 {% blocktrans %}Who are we?{% endblocktrans %}
+    hr
+    p {% lorem 3 p %}
+
+
+

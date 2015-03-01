@@ -1,0 +1,11 @@
+- extends "base.jade"
+- load i18n
+block title
+    | {% blocktrans %}Home{% endblocktrans %}
+block content
+    .jumbotron
+        h1 {% blocktrans %}Welcome{% endblocktrans %}, {{ request.user }}
+        p {{ config.HOME_MESSAGE }}
+        a.btn.btn-large.btn-success(href="{% url 'admin:index' %}") {% blocktrans %}Manage Admin{% endblocktrans %}
+
+

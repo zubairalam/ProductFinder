@@ -1,0 +1,64 @@
+- load compressed i18n staticfiles
+!!! 5
+html(lang="en", data-ng-app)
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        title{% block title %}{% endblock %} | {{ site.name }}
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description", content="{% block description %}{% endblock %}")
+        meta(name="robots", content="{% block robots %}{% endblock %}")
+        meta(name="author", content="{% block author %}{% endblock %}")
+        link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
+        link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css")
+        link(rel="shortcut icon", href="{% static 'images/favicon.ico' %}")
+        - compressed_css 'style'
+        block css
+        body
+            .navbar.navbar-default.navbar-static-top(role="navigation")
+                .container-fluid
+                    .navbar-header
+                        button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+                            span.sr-only Toggle Navigation
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                        a.navbar-brand(href="#")
+                            img.logo(src="http://www.productfinder.com/wp-content/uploads/2013/09/productfinder-logo-small.png", alt="Logo")
+
+                    .collapse.navbar-collapse
+                        ul.nav.navbar-nav.pull-left
+                            {% url 'home' as home %}
+                            {% if request.path == home %}
+                            li.active
+                                a(href="{% url 'home' %}") {% blocktrans %}Home{% endblocktrans %}
+                            {% else %}
+                            li
+                                a(href="{% url 'home' %}") {% blocktrans %}Home{% endblocktrans %}
+                            {% endif %}
+                            {% url 'about' as about %}
+                            {% if request.path == about %}
+                            li.active
+                                a(href="{% url 'about' %}") {% blocktrans %}About us{% endblocktrans %}
+                            {% else %}
+                            li
+                                a(href="{% url 'about' %}") {% blocktrans %}About us{% endblocktrans %}
+                            {% endif %}
+                            li
+                                a(href="{% url 'admin:index' %}") {% blocktrans %}Admin{% endblocktrans %}
+
+            .container
+                block content
+            hr
+            .container
+                .row-fluid
+                    p &copy; &nbsp;
+                        a(href="http://{{ site.domain }}") {{ site.name }}
+                        &nbsp; {% now "Y" %}
+
+        script(src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js")
+        script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+        script(src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
+        - compressed_js 'site'
+        block js
+

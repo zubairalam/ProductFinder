@@ -1,0 +1,45 @@
+# Base python packages for project to run
+
+# python related
+#beautifulsoup==3.2.1
+beautifulsoup4==4.3.2
+celery==3.1.10
+elasticsearch==1.0.0
+mechanize==0.2.5
+pillow==2.4.0
+psycopg2==2.5.2
+pyelasticsearch==0.6.1
+pygeocoder==1.2.4
+pygments==1.6
+pyjade==2.2.0
+redis==2.9.1
+scrapy==0.22.2
+south==0.8.4
+selenium==2.41.0
+unicode-slugify==0.1.1
+werkzeug==0.9.4
+requests-futures==0.9.4
+
+# django related
+django==1.6.2
+djangorestframework==2.3.13
+dj-database-url==0.3.0
+django-allauth==0.16.1
+django-autoslug==1.7.2
+django-braces==1.4.0
+django-celery==3.1.10
+django-configurations==0.8
+-e git+git://github.com/comoga/django-constance#egg=django-constance
+django-crispy-forms==1.4.0
+#django-floppyforms==1.1.1
+django-extensions==1.3.3
+django-haystack==2.1.0
+django-mailer==0.1.0
+django-model-utils==2.0.3
+django-mptt==0.6.0
+django-pipeline==1.3.23
+django-statsd==1.9.1
+django-storages==1.1.8
+django-stored-messages==1.0.0
+django-vanilla-views==1.0.2
+
